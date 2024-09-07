@@ -1,0 +1,80 @@
+/* Calculator.css */
+
+body {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la pantalla */
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-gap: 15px; /* Espacio entre botones */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #373a40;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.display {
+    grid-column: span 4; /* Ocupa las 4 columnas */
+    background-color: #686d76; /* Fondo del display */
+    color: white;
+    padding: 20px;
+    text-align: right;
+    font-size: 2em;
+    border-radius: 8px 8px 0 0; /* Border redondeados en la parte superior*/
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.45em;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button.operator {
+    background-color: #e88d67; /* Color naranja para los operadores*/
+    color: #eeeeee;
+}
+
+button.operator:hover {
+    background-color: #686d76;
+    border-color: #373a40;
+}
+
+/* Responsividad */
+
+@media (max-width: 768px) {
+    .calculator {
+        max-width: 90%;
+    }
+
+    button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+    }
+}
